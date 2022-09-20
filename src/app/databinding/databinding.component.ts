@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabindingComponent implements OnInit {
   userData:string='kruthika'
-  userInput:string=''
+  userInput:string='';
+  isDisable:boolean=true
 
   constructor() { }
 
@@ -15,7 +16,12 @@ export class DatabindingComponent implements OnInit {
   }
   userdetail(event:any){
     console.log(event.target.value)
+    this.isDisable=false
 
+
+  }
+  clear(){
+    this.userInput=''
   }
 
 }
